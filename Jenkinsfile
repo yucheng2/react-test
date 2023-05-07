@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        label "slave01"
+        docker{
+            image 'node:10'
+            args '-p 20000:8080'
+        }
     }
  
     stages {
